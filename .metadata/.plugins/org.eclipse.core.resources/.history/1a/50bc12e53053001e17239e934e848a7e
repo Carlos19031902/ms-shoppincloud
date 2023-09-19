@@ -1,0 +1,18 @@
+package academy.digitallab.product;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
+import academy.digitallab.product.model.Product;
+import academy.digitallab.product.repository.ProductRepository;
+
+@DataJpaTest
+public class productRepositoryMockTest {
+
+	@Autowired
+	private ProductRepository repo;
+	
+	public void whenFindByCategory_thenListProduct() {
+		//Product product01 = Product.builder();
+	}
+}

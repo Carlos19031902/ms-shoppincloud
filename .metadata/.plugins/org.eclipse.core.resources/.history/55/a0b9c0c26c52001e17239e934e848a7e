@@ -1,0 +1,10 @@
+package academy.digitallab.product.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TBL_CATEGORIES")
+public class Category {
+
+}

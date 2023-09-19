@@ -1,0 +1,9 @@
+package academy.digitallab.product.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import academy.digitallab.product.model.Product;
+
+public interface ProductRepository extends JpaRepository<Product, Long> {
+
+}

@@ -1,0 +1,6 @@
+CREATE TABLE tbl_categories (id number,name varchar(50));
+
+INSERT INTO tbl_categories (id, name) VALUES (1, 'shoes');
+INSERT INTO tbl_categories (id, name) VALUES (2, 'books');
+INSERT INTO tbl_categories (id, name) VALUES (3, 'electronics');
+

@@ -1,0 +1,2 @@
+CREATE TABLE tbl_categories (id number primary key,name varchar(50));
+CREATE TABLE tbl_products(id number primary key, name varchar(50),description varchar(200),stock number,price number,status varchar(30),create_at date,category_id number,FOREIGN KEY (category_id) REFERENCES tbl_categories(id)) ;
