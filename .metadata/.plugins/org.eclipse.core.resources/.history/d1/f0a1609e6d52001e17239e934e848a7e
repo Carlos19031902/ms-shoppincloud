@@ -1,5 +1,0 @@
-package academy.digitallab.product.repository;
-
-public interface ProductRepository {
-
-}

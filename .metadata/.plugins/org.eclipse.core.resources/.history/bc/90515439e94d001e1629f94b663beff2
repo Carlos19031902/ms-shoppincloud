@@ -1,4 +1,0 @@
-server.port=7005
-spring.application.name=dragon-ball
-spring.profiles.active=prod
-spring.config.import=optional:configserver:http://localhost:7004

@@ -1,6 +1,0 @@
-
-spring.application.name=spring-registry
-server.port=7006
-eureka.client.register-with-eureka=false
-eureka.client.fetch-registry=false
-
