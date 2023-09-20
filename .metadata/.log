@@ -3689,3 +3689,57 @@ java.lang.NullPointerException
 	at org.springsource.ide.eclipse.commons.livexp.core.LiveVariable.setValue(LiveVariable.java:46)
 	at org.springframework.ide.eclipse.boot.dash.util.AbstractPollingAppReadyStateMonitor$1.run(AbstractPollingAppReadyStateMonitor.java:51)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:07:15.089
+!MESSAGE Classpath changed for project: customer-service
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:08:29.565
+!MESSAGE Classpath changed for project: customer-service
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:10:33.662
+!MESSAGE Classpath changed for project: customer-service
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:10:33.867
+!MESSAGE Classpath changed for project: customer-service
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:10:35.156
+!MESSAGE Classpath changed for project: customer-service
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:11:00.081
+!MESSAGE Classpath changed for project: customer-service
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:13:08.700
+!MESSAGE Classpath changed for project: academy.digitallap
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:13:08.700
+!MESSAGE Boot project REMOVED: academy.digitallap
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:13:08.700
+!MESSAGE Classpath changed for project: product
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:13:09.473
+!MESSAGE Classpath changed for project: product
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:13:09.474
+!MESSAGE Boot project ADDED: product
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:13:20.108
+!MESSAGE Classpath changed for project: product
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:13:20.109
+!MESSAGE Boot project REMOVED: product
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:13:20.109
+!MESSAGE Classpath changed for project: product-service
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:13:20.911
+!MESSAGE Classpath changed for project: product-service
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:13:20.911
+!MESSAGE Boot project ADDED: product-service
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:13:37.458
+!MESSAGE Classpath changed for project: product-service
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:13:50.046
+!MESSAGE Classpath changed for project: product-service
