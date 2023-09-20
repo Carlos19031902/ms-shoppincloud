@@ -1,6 +1,8 @@
 package academy.digitallap.shoppingservice.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import academy.digitallap.shoppingservice.clientmodel.Custumer;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -34,6 +36,11 @@ public class Invoice {
     private List<InvoiceItem> items;
 
     private String state;
+    
+    @Transient
+    private Custumer customer;
+    
+    
 
     public Invoice(){
         items = new ArrayList<>();

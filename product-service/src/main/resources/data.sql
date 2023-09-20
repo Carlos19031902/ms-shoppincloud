@@ -1,8 +1,6 @@
-INSERT INTO tbl_categories (id, name) VALUES (1, 'shoes');
-
-INSERT INTO tbl_categories (id, name) VALUES (2, 'books');
-
-INSERT INTO tbl_categories (id, name) VALUES (3, 'electronics');
+INSERT INTO tbl_categories (id, name) VALUES (default, 'shoes');
+INSERT INTO tbl_categories (id, name) VALUES (default, 'books');
+INSERT INTO tbl_categories (id, name) VALUES (default, 'electronics');
 
 INSERT INTO tbl_products (id, name, description, stock,price,status, create_at,category_id)
 VALUES (default, 'adidas Cloudfoam Ultimate','Walk in the air in the black / black CLOUDFOAM ULTIMATE running shoe from ADIDAS',5,178.89,'CREATED','2018-09-05',1);

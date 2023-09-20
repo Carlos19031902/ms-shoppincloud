@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "tbl_region")
+@Table(name = "tbl_regions")
 @Data
 public class Region {
 

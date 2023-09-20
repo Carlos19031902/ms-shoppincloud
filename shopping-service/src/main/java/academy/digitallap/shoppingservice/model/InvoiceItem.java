@@ -5,8 +5,10 @@ import lombok.Data;
 import javax.persistence.*;
 import javax.validation.constraints.Positive;
 
+import academy.digitallap.shoppingservice.clientmodel.Product;
+
 @Entity
-@Table(name = "tbl_invoice_item")
+@Table(name = "tbl_invoice_items")
 @Data
 public class InvoiceItem {
 
@@ -20,6 +22,9 @@ public class InvoiceItem {
     @Column(name = "product_id")
     private Long ProductId;
 
+    @Transient
+    private Product product;
+    
     @Transient
     private double subTotal;
     public Double getSubtotal(){

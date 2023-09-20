@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name="tbl_customer")
+@Table(name="tbl_customers")
 @Data
 
 public class Customer {
