@@ -3743,3 +3743,9 @@ java.lang.NullPointerException
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:13:50.046
 !MESSAGE Classpath changed for project: product-service
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:19:30.543
+!MESSAGE Classpath changed for project: shopping-service
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-09-20 11:19:39.545
+!MESSAGE Classpath changed for project: shopping-service
