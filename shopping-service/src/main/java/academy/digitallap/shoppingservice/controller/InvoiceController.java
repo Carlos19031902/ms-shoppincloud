@@ -4,6 +4,8 @@ import academy.digitallap.shoppingservice.model.Invoice;
 import academy.digitallap.shoppingservice.service.InvoiceService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,6 +25,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/invoices")
 public class InvoiceController {
 
+	
     @Autowired
     private InvoiceService invoiceService;
     @GetMapping
@@ -43,6 +46,7 @@ public class InvoiceController {
         return ResponseEntity.ok(invoice);
     }
 
+   
     @PostMapping
     public ResponseEntity<Invoice> createInvoice(@Valid @RequestBody Invoice invoice, BindingResult result){
         log.info(invoice.toString());
