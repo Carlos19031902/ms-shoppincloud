@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import academy.digitallap.shoppingservice.clientmodel.Custumer;
 
-@FeignClient(name = "customer", path = "/customers")
+@FeignClient(name = "customer", fallback = CustomerHystrixFallbackFactory.class)
 public interface CustomerClient {
 
 	@GetMapping(value = "/{id}")

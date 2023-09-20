@@ -1,10 +1,12 @@
 package academy.digitallap.shoppingservice.clientmodel;
 
 
+import lombok.Builder;
 import lombok.Data;
 
 
 @Data
+@Builder
 public class Custumer {
 	private Long id;
 
