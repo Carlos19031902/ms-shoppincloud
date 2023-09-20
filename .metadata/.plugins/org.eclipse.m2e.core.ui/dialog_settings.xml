@@ -2,14 +2,14 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/familiareyesvilla/Documents/proyectos/springmvc/spring-config-server"/>
+			<item value="/Users/familiareyesvilla/Documents/proyectos/springmvc/spring-config-server-1"/>
 			<item value="/Users/familiareyesvilla/Documents/workspace-spring-tool-suite-4-4.19.1.RELEASE/shopping-service"/>
 			<item value="/Users/familiareyesvilla/Documents/workspace-spring-tool-suite-4-4.19.1.RELEASE/customer-service"/>
 			<item value="/Users/familiareyesvilla/Documents/workspace-spring-tool-suite-4-4.19.1.RELEASE/academy.digitallap"/>
 			<item value="/Users/familiareyesvilla/Documents/workspace-spring-tool-suite-4-4.19.1.RELEASE/config-server"/>
 			<item value="/Users/familiareyesvilla/Documents/proyectos/microservices-master/HelloConfigClient"/>
 			<item value="/Users/familiareyesvilla/Documents/proyectos/microservices-master/HelloConfigServer"/>
-			<item value="/Users/familiareyesvilla/Documents/proyectos/springmvc/spring-config-server-1"/>
-			<item value="/Users/familiareyesvilla/Documents/proyectos/springmvc/spring-config-server"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
