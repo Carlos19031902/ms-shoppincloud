@@ -6,11 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import academy.digitallap.shoppingservice.clientmodel.Custumer;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
-@FeignClient(name = "customer", fallback = CustomerHystrixFallbackFactory.class)
+import academy.digitallap.shoppingservice.clientmodel.Customer;
+
+@FeignClient(name = "customer", path = "/customers", fallback = CustomerHystrixFallbackFactory.class)
 public interface CustomerClient {
 
+	
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<Custumer> getCustomer(@PathVariable("id") String id );
+	public ResponseEntity<Customer> getCustomer(@PathVariable("id") Long id );
 }

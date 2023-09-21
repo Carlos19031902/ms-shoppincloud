@@ -2,7 +2,7 @@ package academy.digitallap.shoppingservice.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import academy.digitallap.shoppingservice.clientmodel.Custumer;
+import academy.digitallap.shoppingservice.clientmodel.Customer;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -38,7 +38,7 @@ public class Invoice {
     private String state;
     
     @Transient
-    private Custumer customer;
+    private Customer customer;
     
     
 

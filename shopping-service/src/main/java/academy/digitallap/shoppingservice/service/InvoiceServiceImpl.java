@@ -2,7 +2,7 @@ package academy.digitallap.shoppingservice.service;
 
 import academy.digitallap.shoppingservice.client.CustomerClient;
 import academy.digitallap.shoppingservice.client.ProductClient;
-import academy.digitallap.shoppingservice.clientmodel.Custumer;
+import academy.digitallap.shoppingservice.clientmodel.Customer;
 import academy.digitallap.shoppingservice.clientmodel.Product;
 import academy.digitallap.shoppingservice.model.Invoice;
 import academy.digitallap.shoppingservice.model.InvoiceItem;
@@ -50,8 +50,6 @@ public class InvoiceServiceImpl implements InvoiceService{
             	productClient.updateStockProduct(invoceItem.getProductId(), invoceItem.getQuantity()*-1);
             });
             
-            return invoiceBd;
-            
         }
         return invoiceBd;
     }
@@ -84,7 +82,7 @@ public class InvoiceServiceImpl implements InvoiceService{
     	Invoice invoice = invoiceRepository.findById(id).orElseThrow();
     
     	if(null!=invoice) {
-    		 Custumer customer = customerCLient.getCustomer(invoice.getCustomerId()).getBody();
+    		 Customer customer = customerCLient.getCustomer(Long.parseLong(invoice.getCustomerId())).getBody();
     		 invoice.setCustomer(customer);
     		 List<InvoiceItem> items = invoice.getItems().stream().map(item->{
     			 Product product = productClient.getProduct(item.getProductId()).getBody();

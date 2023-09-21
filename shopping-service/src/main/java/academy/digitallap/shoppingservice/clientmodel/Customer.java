@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class Custumer {
+public class Customer {
 	private Long id;
 
     private String numberID;

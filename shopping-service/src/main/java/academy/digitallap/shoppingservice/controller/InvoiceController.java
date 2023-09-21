@@ -37,6 +37,7 @@ public class InvoiceController {
         return ResponseEntity.ok(invoices);
     }
 
+    @HystrixCommand
     @GetMapping(value = "/{id}")
     public ResponseEntity<Invoice>  getInvoice(@PathVariable(name = "id") long id){
         Invoice invoice = invoiceService.getInvoice(id);
@@ -46,7 +47,7 @@ public class InvoiceController {
         return ResponseEntity.ok(invoice);
     }
 
-   
+    @HystrixCommand
     @PostMapping
     public ResponseEntity<Invoice> createInvoice(@Valid @RequestBody Invoice invoice, BindingResult result){
         log.info(invoice.toString());
