@@ -38,7 +38,6 @@ public class InvoiceServiceImpl implements InvoiceService{
         return invoiceRepository.findAll();
     }
 
-    @Transactional
     @Override
     public Invoice createInvoice(Invoice invoice) {
         log.info(invoice.toString());
@@ -73,7 +72,7 @@ public class InvoiceServiceImpl implements InvoiceService{
         if (null == invoiceBd) {
             return null;
         }
-        invoiceBd.setState("UPDATED");
+        invoiceBd.setState("DELETED");
         return invoiceRepository.save(invoiceBd);
     }
 

@@ -10,10 +10,10 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import academy.digitallap.shoppingservice.clientmodel.Customer;
 
-@FeignClient(name = "customer", path = "/customers", fallback = CustomerHystrixFallbackFactory.class)
+@FeignClient(name = "customer",  fallback = CustomerHystrixFallbackFactory.class)
 public interface CustomerClient {
 
 	
-	@GetMapping(value = "/{id}")
+	@GetMapping(value = "/customers/{id}")
 	public ResponseEntity<Customer> getCustomer(@PathVariable("id") Long id );
 }

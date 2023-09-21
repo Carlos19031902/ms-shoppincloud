@@ -28,6 +28,7 @@ public class InvoiceController {
 	
     @Autowired
     private InvoiceService invoiceService;
+    
     @GetMapping
     public ResponseEntity<List<Invoice>> getAllInvoice(){
         List<Invoice> invoices = invoiceService.findAllInvoice();
@@ -37,7 +38,6 @@ public class InvoiceController {
         return ResponseEntity.ok(invoices);
     }
 
-    @HystrixCommand
     @GetMapping(value = "/{id}")
     public ResponseEntity<Invoice>  getInvoice(@PathVariable(name = "id") long id){
         Invoice invoice = invoiceService.getInvoice(id);
@@ -47,16 +47,16 @@ public class InvoiceController {
         return ResponseEntity.ok(invoice);
     }
 
-    @HystrixCommand
     @PostMapping
     public ResponseEntity<Invoice> createInvoice(@Valid @RequestBody Invoice invoice, BindingResult result){
         log.info(invoice.toString());
         if(result.hasErrors()){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,this.formatMessage(result));
         }
-        return ResponseEntity.status(HttpStatus.CREATED).body(invoiceService.createInvoice(invoice));
+        Invoice newInvoice = invoiceService.createInvoice(invoice);
+        return ResponseEntity.status(HttpStatus.CREATED).body(newInvoice);
     }
-
+    
     @PutMapping(name = "/{id}")
     public ResponseEntity<?> updateInvoice(@PathVariable long id, @RequestBody Invoice invoice){
         invoice.setId(id);

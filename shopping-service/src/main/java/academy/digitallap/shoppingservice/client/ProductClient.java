@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import academy.digitallap.shoppingservice.clientmodel.Product;
 
-@FeignClient(name = "product", path = "/products")
+@FeignClient(name = "product")
 public interface ProductClient {
 	
-	@GetMapping(value = "/{id}")
+	@GetMapping(value = "/products/{id}")
 	public ResponseEntity<Product> getProduct (@PathVariable(name = "id") Long id );
 
-	@GetMapping(value = "/{id}/stock")
+	@GetMapping(value = "/products/{id}/stock")
     public ResponseEntity<Product> updateStockProduct(@PathVariable Long id,@RequestParam(name = "quantity", required = true) Double quantity);
 }
