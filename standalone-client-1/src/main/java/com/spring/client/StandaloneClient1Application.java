@@ -1,5 +1,6 @@
 package com.spring.client;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -21,8 +22,8 @@ import com.spring.client.clients.CharacterClients;
 @EnableFeignClients
 public class StandaloneClient1Application implements ApplicationRunner{
 	
-	@Autowired
-	private EurekaClient eurekaClient;
+//	@Autowired
+//	private EurekaClient eurekaClient;
 	
 	@Autowired
 	private CharacterClients clients;
@@ -41,9 +42,13 @@ public class StandaloneClient1Application implements ApplicationRunner{
 //		for(InstanceInfo ins:instance) {
 //			log.info("{},{}",ins.getIPAddr(),ins.getPort());
 //		}
-		ResponseEntity response = clients.getApplicationName();
-		log.info("status code {}",response.getStatusCode());
-		log.info("body {}",response.getBody());
+		for (int i = 0; i < 10; i++) {
+			ResponseEntity<String> response = clients.getApplicationName();
+			log.info("status code {}",response.getStatusCode());
+			log.info("body {}",response.getBody());
+		}
+		
+		
 	}
 
 }

@@ -1,14 +1,15 @@
 package com.spring.client.clients;
 
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @FeignClient(name="DRAGON-BALL")
+@LoadBalancerClient(name = "DRAGON-BALL", configuration = LoadBalancerConfiguration.class)
 public interface CharacterClients {
 	
-	@RequestMapping(method = RequestMethod.GET, value="/application")
+	@GetMapping(value="/application")
 	public ResponseEntity<String> getApplicationName();
 	
 }

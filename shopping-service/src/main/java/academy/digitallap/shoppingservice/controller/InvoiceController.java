@@ -4,7 +4,6 @@ import academy.digitallap.shoppingservice.model.Invoice;
 import academy.digitallap.shoppingservice.service.InvoiceService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +39,11 @@ public class InvoiceController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Invoice>  getInvoice(@PathVariable(name = "id") long id){
-        Invoice invoice = invoiceService.getInvoice(id);
+        Invoice invoice = null;
+        for (int i = 0; i < 10; i++) {
+        	invoice = invoiceService.getInvoice(id);
+        	log.info(invoice.getCustomerId());
+		}
         if(null == invoice){
             return ResponseEntity.notFound().build();
         }
